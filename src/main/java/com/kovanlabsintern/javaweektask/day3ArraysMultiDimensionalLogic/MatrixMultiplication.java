@@ -31,5 +31,4 @@ public class MatrixMultiplication {
             System.out.println(Arrays.toString(res));
         }
     }
-
 }
