@@ -1,16 +1,15 @@
 package com.kovanlabsintern.javaweektask.day2ControlFlowAlgorithmicLogic;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class PrimeSieve {
-    public static int[] seieve(int n)
+    public static List<Integer> seieve(int n)
     {
         boolean prime[] = new boolean[n+1];
-        for(int i=0;i<=n;i++)
-        {
-            prime[i]=true;
-        }
-
+        Arrays.fill(prime,true);
         for(int j=2;j*j<=n;j++)
         {
             if(prime[j])
@@ -21,27 +20,15 @@ public class PrimeSieve {
                 }
             }
         }
-
-        int count = 0;
+        List<Integer> l = new ArrayList<>();
         for(int i=2;i<=n;i++)
         {
             if(prime[i])
             {
-                count++;
+                l.add(i);
             }
         }
-
-        int res[] = new int[count];
-        int p=0;
-        for(int m=2;m<=n;m++)
-        {
-            if(prime[m])
-            {
-                res[p]=m;
-                p++;
-            }
-        }
-        return res;
+        return l;
     }
 
     public static void main(String[] args)
@@ -49,10 +36,11 @@ public class PrimeSieve {
         System.out.println("Enter a number: ");
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int result[] = seieve(n);
+        List<Integer> result = seieve(n);
+        System.out.println("Prime Number Till "+n+" are :");
         for(int val : result)
         {
-            System.out.println(val+" ");
+            System.out.print(val+" ");
         }
     }
 }
