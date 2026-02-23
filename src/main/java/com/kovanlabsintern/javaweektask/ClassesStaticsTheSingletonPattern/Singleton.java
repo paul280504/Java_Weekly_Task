@@ -13,5 +13,6 @@ public class Singleton {
         else {
             System.out.println("A & B have different Hashcode");
         }
+
     }
 }

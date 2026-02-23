@@ -8,6 +8,7 @@ public class ObjectCounter {
     }
     public static int getcount()
     {
+
         return count;
     }
     public static void main(String[] args)
@@ -15,6 +16,6 @@ public class ObjectCounter {
         new ObjectCounter();
         new ObjectCounter();
         new ObjectCounter();
-        System.out.println(ObjectCounter.getcount());
+        System.out.println(getcount());
     }
 }

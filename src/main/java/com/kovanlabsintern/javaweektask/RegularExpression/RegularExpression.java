@@ -1,5 +1,6 @@
 package com.kovanlabsintern.javaweektask.RegularExpression;
 
+import java.util.Locale;
 import java.util.regex.Pattern;
 
 public class RegularExpression {
